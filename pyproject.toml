@@ -1,0 +1,41 @@
+[project]
+name = "signwriting-animation"
+description = "Illustrate isolated sign language videos"
+version = "0.0.1"
+authors = [
+    { name = "Amit Moryossef", email = "amit@sign.mt" },
+]
+readme = "README.md"
+dependencies = [
+    "pose-format"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pylint"
+]
+
+[tool.yapf]
+based_on_style = "google"
+column_limit = 120
+
+[tool.pylint]
+max-line-length = 120
+disable = [
+    "C0114", # Missing module docstring
+    "C0115", # Missing class docstring
+    "C0116", # Missing function or method docstring
+]
+
+[tool.setuptools]
+packages = [
+    "video_illustration"
+]
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = ["video_illustration"]
+
+[project.scripts]
+illustrate_video = "video_illustration.bin:main"
