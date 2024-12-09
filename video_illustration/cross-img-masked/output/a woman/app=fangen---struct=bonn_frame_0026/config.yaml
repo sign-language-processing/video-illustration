@@ -1,0 +1,30 @@
+adain_range:
+- 25
+- 45
+app_image_path: /Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/fangen.jpg
+contrast_strength: 1.67
+cross_attn_32_range:
+- 10
+- 10
+cross_attn_64_range:
+- 0
+- 2
+domain_name: a woman
+inject_32_res: false
+inject_64_res: true
+key_mask_path: null
+key_scale: null
+load_latents: true
+num_timesteps: 1
+object_noun: a woman
+output_path: output/a woman/app=fangen---struct=bonn_frame_0026
+prompt: A photo of a a woman
+query_mask_path: /Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/left_hand_mask.png
+query_scale: 3.5
+seed: 42
+skip_steps: 0
+struct_image_path: /Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/bonn_frame_0026.jpg
+swap_guidance_scale: 3.5
+use_masked_adain: false
+value_mask_path: /Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/left_hand_mask.png
+value_scale: 3.5

@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "run cross-ICL",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "cross_img_ICL/run.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": ["--prompt_gt_image_path", "/Users/jannabruner/Documents/research/SL_repo_ongoing/images/000000196185_mask_512.jpg",
+            "--prompt_image_path", "/Users/jannabruner/Documents/research/SL_repo_ongoing/images/000000196185_512.jpg", 
+            "--query_image_path","/Users/jannabruner/Documents/research/SL_repo_ongoing/images/000000196185_512.jpg",
+            "--output_path","/Users/jannabruner/Documents/research/SL_repo_ongoing/results/icl_recover_results_with_cross_img_basecode" , 
+            "--use_masked_adain", "False",
+            "--load_latents","False",
+            "--num_timesteps","2",
+            "--skip_steps", "0",
+            "--contrast_strength" ,"1.67" ,
+            "--swap_guidance_scale", "3.5"]
+        }
+
+
+    ]
+}
