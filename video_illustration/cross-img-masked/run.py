@@ -23,9 +23,9 @@ class Range(NamedTuple):
 
 
 device = 'cuda' if torch.cuda.is_available() else "cpu"
-# @pyrallis.wrap()
-# def main(cfg: RunConfig):
-#     run(cfg)
+@pyrallis.wrap()
+def main(cfg: RunConfig):
+    run(cfg)
 
 
 def run(cfg: RunConfig) -> List[Image.Image]:
@@ -71,26 +71,26 @@ def run_appearance_transfer(model: AppearanceTransferModel, cfg: RunConfig) -> L
 
 
 if __name__ == '__main__':
+    main()
+    # cfg = RunConfig(
+    #     app_image_path = Path("/Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/fangen.jpg"),
+    #     struct_image_path = Path("/Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/bonn_frame_0026.jpg"),
+    #     query_mask_path=Path("/Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/left_hand_mask.png"),
+    #     value_mask_path=Path("/Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/left_hand_mask.png"),
+    #     use_masked_adain=False,
+    #     seed=42,
+    #     domain_name="a woman",
+    #     prompt=None,
+    #     load_latents=True,
+    #     skip_steps=0,
+    #     num_timesteps=1,
+    #     cross_attn_32_range=Range(start=10,end=10),
+    #     cross_attn_64_range=Range(start=0,end=2),
+    #     adain_range=Range(start=25,end=45),
+    #     swap_guidance_scale=3.5,
+    #     contrast_strength=1.67,
+    #     query_scale = 3.5,
+    #     value_scale=3.5
+    # )
 
-    cfg = RunConfig(
-        app_image_path = Path("/Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/fangen.jpg"),
-        struct_image_path = Path("/Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/bonn_frame_0026.jpg"),
-        query_mask_path=Path("/Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/left_hand_mask.png"),
-        value_mask_path=Path("/Users/jannabruner/Documents/research/SL_repo_ongoing/SL_repo/images/left_hand_mask.png"),
-        use_masked_adain=False,
-        seed=42,
-        domain_name="a woman",
-        prompt=None,
-        load_latents=True,
-        skip_steps=0,
-        num_timesteps=1,
-        cross_attn_32_range=Range(start=10,end=10),
-        cross_attn_64_range=Range(start=0,end=2),
-        adain_range=Range(start=25,end=45),
-        swap_guidance_scale=3.5,
-        contrast_strength=1.67,
-        query_scale = 3.5,
-        value_scale=3.5
-    )
-
-    run(cfg)
+    # run(cfg)
