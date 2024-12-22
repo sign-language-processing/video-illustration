@@ -5,7 +5,7 @@ import torch.nn.functional as F
 
 from config import RunConfig
 from constants import OUT_INDEX, STRUCT_INDEX, STYLE_INDEX
-from models.stable_diffusion import CrossImageAttentionStableDiffusionPipeline
+from video_illustration.cross_image_attention.models.stable_diffusion import CrossImageAttentionStableDiffusionPipeline
 from utils import attention_utils
 from utils.adain import masked_adain, adain
 from utils.model_utils import get_stable_diffusion_model

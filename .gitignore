@@ -2,3 +2,4 @@
 build/
 video_illustration.egg-info/
 **/__pycache__
+**/.vscode
